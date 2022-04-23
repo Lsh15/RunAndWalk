@@ -1,4 +1,4 @@
-package com.androiddevs.runningappyt
+package com.androiddevs.runningapp
 
 import org.junit.Test
 
