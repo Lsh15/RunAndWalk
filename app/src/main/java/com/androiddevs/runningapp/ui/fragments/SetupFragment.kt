@@ -2,6 +2,7 @@ package com.androiddevs.runningapp.ui.fragments
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
@@ -9,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.androiddevs.runningapp.R
 import com.androiddevs.runningapp.other.Constants.KEY_FIRST_TIME_TOGGLE
 import com.androiddevs.runningapp.other.Constants.KEY_NAME
+import com.androiddevs.runningapp.other.Constants.KEY_TYPE
 import com.androiddevs.runningapp.other.Constants.KEY_WEIGHT
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,6 +40,19 @@ class SetupFragment : Fragment(R.layout.fragment_setup) {
                 navOptions
             )
         }
+        walkToggleBtn.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked){
+                Log.d("RunBtn","Run")
+                sharedPref.edit()
+                    .putBoolean(KEY_TYPE,isChecked)
+                    .apply()
+            }else {
+                Log.d("WalkBtn","Walk")
+                sharedPref.edit()
+                    .putBoolean(KEY_TYPE,isChecked)
+                    .apply()
+            }
+        }
         tvContinue.setOnClickListener {
             val success = writePersonalDataToSharePref()
             if (success){
@@ -45,7 +60,6 @@ class SetupFragment : Fragment(R.layout.fragment_setup) {
             }
             else{
                 Snackbar.make(requireView(),"Please enter all fields",Snackbar.LENGTH_SHORT).show()
-
             }
         }
     }
