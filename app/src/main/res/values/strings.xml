@@ -9,4 +9,17 @@
     </string-array>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyDEUG1s6MnhVnSErulSUfZSkD3m5bFzv84</string>
+
+    <string name="welcome">Welcome!\nPlease enter your name and weight.</string>
+    <string name="walk">Walk</string>
+    <string name="run">Run</string>
+    <string name="name">Your Name</string>
+    <string name="DATE">DATE</string>
+    <string name="DURATION">DURATION</string>
+    <string name="weight">Your Weight</string>
+    <string name="AVG_SPEED">AVG SPEED</string>
+    <string name="DISTANCE">DISTANCE</string>
+    <string name="CALORIES_BURNED">CALORIES BURNED</string>
+
+
 </resources>

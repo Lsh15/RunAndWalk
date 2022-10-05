@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RunningApp</string>
+    <string name="welcome">안녕하세요!  이름과 몸무게를 입력해주세요</string>
+    <string name="walk">걷기</string>
+    <string name="run">뛰기</string>
+    <string name="name">이름</string>
+    <string name="weight">몸무게</string>
+    <string name="DATE">날짜</string>
+    <string name="DISTANCE">거리</string>
+    <string name="CALORIES_BURNED">소모 칼로리</string>
+    <string name="DURATION">이동거리</string>
+    <string name="AVG_SPEED">평균 속도</string>
+</resources>
