@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/md_blue_200">
 
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Welcome!\nPlease enter your name and weight."
+        android:text="@string/welcome"
         android:textAlignment="center"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/tilName"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Your Name"
+            android:hint="@string/name"
             android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -49,8 +49,8 @@
             android:id="@+id/etWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Your Weight"
             android:ems="10"
+            android:hint="@string/weight"
             android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -66,22 +66,34 @@
         app:layout_constraintLeft_toRightOf="@id/tilWeight"
         app:layout_constraintTop_toTopOf="@+id/tilWeight" />
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="150dp"
+    <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+        android:id="@+id/walkToggleBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:textOff="Walk"
-        android:textOn="Run"
+        android:textOff="@string/walk"
+        android:textOn="@string/run"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilWeight" />
+
+    <!--    <ToggleButton-->
+    <!--        android:id="@+id/toggleButton"-->
+    <!--        android:layout_width="150dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:textOff="Walk"-->
+    <!--        android:textOn="Run"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tilWeight" />-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="@color/md_blue_900"
+        android:background="@color/md_blue_500"
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
