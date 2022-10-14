@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RunningApp</string>
-    <string name="welcome">안녕하세요! \n이름과 몸무게를 입력해주세요</string>
+    <string name="welcome">이름과 몸무게를 입력하고 유형을 선택하세요</string>
     <string name="walk">걷기</string>
     <string name="run">뛰기</string>
     <string name="name">이름</string>
@@ -11,4 +11,21 @@
     <string name="CALORIES_BURNED">소모 칼로리</string>
     <string name="DURATION">운동 시간</string>
     <string name="AVG_SPEED">평균 속도</string>
+    <string name="Continue">계속</string>
+    <string name="Start">시작</string>
+    <string name="Finish">끝</string>
+    <string name="Total_Distance">총 거리</string>
+    <string name="Total_Time">총 시간</string>
+    <string name="Total_Calories_Burned">총 칼로리 소모량</string>
+    <string name="Average_Speed">평균 속도</string>
+    <string name="Statistics">설정</string>
+    <string name="Settings">통계</string>
+    <string name="CALORIES">칼로리</string>
+    <string name="TIME">시간</string>
+    <string name="Running_Time">운동 시간</string>
+    <string name="Apply_Changes">설정 변경하기</string>
+    <string name="Sort_by">정렬 기준:</string>
+    <string name="Finish_Run">운동 종료하기</string>
+    <string name="Your_Runs">운동하기</string>
+
 </resources>

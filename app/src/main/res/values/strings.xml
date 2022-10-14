@@ -1,25 +1,39 @@
 <resources>
     <string name="app_name">RunningApp</string>
     <string-array name="filter_options">
-        <item>Date</item>
-        <item>Running Time</item>
-        <item>Distance</item>
-        <item>Average Speed</item>
-        <item>Calories Burned</item>
+        <item>@string/DATE</item>
+        <item>@string/Running_Time</item>
+        <item>@string/DISTANCE</item>
+        <item>@string/Average_Speed</item>
+        <item>@string/CALORIES_BURNED</item>
     </string-array>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyDEUG1s6MnhVnSErulSUfZSkD3m5bFzv84</string>
 
-    <string name="welcome">Welcome!\nPlease enter your name and weight.</string>
+    <string name="welcome">Please enter your name and weight and select a type.</string>
     <string name="walk">Walk</string>
     <string name="run">Run</string>
     <string name="name">Your Name</string>
     <string name="DATE">DATE</string>
+    <string name="TIME">TIME</string>
+    <string name="Running_Time">Running Time</string>
+    <string name="CALORIES">CALORIES</string>
     <string name="DURATION">DURATION</string>
     <string name="weight">Your Weight</string>
     <string name="AVG_SPEED">AVG SPEED</string>
     <string name="DISTANCE">DISTANCE</string>
     <string name="CALORIES_BURNED">CALORIES BURNED</string>
-
-
+    <string name="Continue">Continue</string>
+    <string name="Start">Start</string>
+    <string name="Finish">Finish Run</string>
+    <string name="Total_Distance">Total Distance</string>
+    <string name="Total_Time">Total Time</string>
+    <string name="Total_Calories_Burned">Total Calories Burned</string>
+    <string name="Average_Speed">Average Speed</string>
+    <string name="Statistics">Statistics</string>
+    <string name="Settings">Settings</string>
+    <string name="Apply_Changes">Apply Changes</string>
+    <string name="Sort_by">Sort by:</string>
+    <string name="Finish_Run">Finish Run</string>
+    <string name="Your_Runs">Your Runs</string>
 </resources>
