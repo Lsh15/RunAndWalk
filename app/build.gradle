@@ -15,6 +15,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -83,7 +84,7 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:2.25.2"
 
     // Dagger Android
-    api 'com.google.dagger:dagger-android:2.23.2'
+    api 'com.google.dagger:dagger-android:2.35.1'
     api 'com.google.dagger:dagger-android-support:2.23.2'
     kapt 'com.google.dagger:dagger-android-processor:2.23.2'
 
@@ -108,6 +109,7 @@ dependencies {
 
     implementation 'android.arch.lifecycle:extensions:1.1.1'
 
+    // Custom ToggleBtn
     implementation 'me.rishabhkhanna:CustomToggle:1.0.0'
 
 }

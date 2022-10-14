@@ -8,15 +8,19 @@
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_close_white.xml" value="0.2265" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_delete.xml" value="0.2265" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_directions_run_black_24dp.xml" value="0.2105" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_graph.xml" value="0.2105" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2105" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_pause_black_24dp.xml" value="0.2105" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_run.xml" value="0.2105" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_run_color.xml" value="0.2105" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_settings.xml" value="0.2105" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/drawable/ic_stop_black_24dp.xml" value="0.2105" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout-land/fragment_statistics.xml" value="0.2149161518093557" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout-land/fragment_tracking.xml" value="0.21472663139329806" />
-        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/activity_main.xml" value="0.23641304347826086" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/fragment_run.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/fragment_settings.xml" value="0.264" />
-        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/fragment_setup.xml" value="0.23641304347826086" />
+        <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/fragment_setup.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/fragment_statistics.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/fragment_tracking.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/SH/AndroidStudioProjects/RunningApp/app/src/main/res/layout/item_run.xml" value="0.23641304347826086" />
