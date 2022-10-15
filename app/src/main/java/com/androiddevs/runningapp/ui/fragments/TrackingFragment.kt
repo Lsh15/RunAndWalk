@@ -1,7 +1,9 @@
 package com.androiddevs.runningapp.ui.fragments
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
@@ -14,6 +16,7 @@ import com.androiddevs.runningapp.db.Run
 import com.androiddevs.runningapp.other.Constants.ACTION_PAUSE_SERVICE
 import com.androiddevs.runningapp.other.Constants.ACTION_START_OR_RESUME_SERVICE
 import com.androiddevs.runningapp.other.Constants.ACTION_STOP_SERVICE
+import com.androiddevs.runningapp.other.Constants.KEY_TYPE
 import com.androiddevs.runningapp.other.Constants.MAP_ZOOM
 import com.androiddevs.runningapp.other.Constants.POLYLINE_COLOR
 import com.androiddevs.runningapp.other.Constants.POLYLINE_WIDTH
@@ -50,7 +53,11 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     private var menu: Menu? = null
 
     @set:Inject
-    var weight = 80f
+//    var weight = 80f
+    var weight = 1f
+
+    @Inject
+    lateinit var sharedPref : SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -153,10 +160,10 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     private fun updateTracking(isTracking: Boolean) {
         this.isTracking = isTracking
         if(!isTracking && curTimeInMillis > 0L) {
-            btnToggleRun.text = "Start"
+            btnToggleRun.text = getString(R.string.Start)
             btnFinishRun.visibility = View.VISIBLE
         } else if(isTracking){
-            btnToggleRun.text = "Stop"
+            btnToggleRun.text = getString(R.string.Stop)
             menu?.getItem(0)?.isVisible = true
             btnFinishRun.visibility = View.GONE
         }
@@ -191,20 +198,29 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
         )
     }
 
+//    칼로리 계산 방법 kcal = (((3.5 * weight * min) * met)/1000)*5
     private fun endRunAndSaveToDb() {
         map?.snapshot { bmp ->
             var distanceInMeters = 0
+            var met:Float = 0f
             for(polyline in pathPoints) {
                 distanceInMeters += TrackingUtility.calculatePolylineLength(polyline).toInt()
             }
             val avgSpeed = round((distanceInMeters / 1000f) / (curTimeInMillis / 1000f / 60 / 60) * 10) / 10f
+            val curTimeInMin = curTimeInMillis / 1000f / 60
             val dateTimestamp = Calendar.getInstance().timeInMillis
-            val caloriesBurned = ((distanceInMeters / 1000f) * weight).toInt()
+//            val caloriesBurned = ((distanceInMeters / 1000f) * weight).toInt()
+            val walkrunType = sharedPref.getBoolean(KEY_TYPE,true)
+            met = if (walkrunType) 5.0f else 3.5f
+            val caloriesBurned =((((3.5 * weight * curTimeInMin) * met) / 1000) * 5).toInt()
+            Log.d("endWeight","weight $weight")
+            Log.d("WalkRun", sharedPref.getBoolean(KEY_TYPE,true).toString())
+            Log.d("TIME","curTimeInMin ${curTimeInMin.toInt()}")
             val run = Run(bmp, dateTimestamp, avgSpeed, distanceInMeters, curTimeInMillis, caloriesBurned)
             viewModel.insertRun(run)
             Snackbar.make(
                 requireActivity().findViewById(R.id.rootView),
-                "Run saved successfully",
+                getString(R.string.Run_saved),
                 Snackbar.LENGTH_LONG
             ).show()
             stopRun()
