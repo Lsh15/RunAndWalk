@@ -19,12 +19,14 @@ import dagger.hilt.android.scopes.ServiceScoped
 @InstallIn(ServiceComponent::class)
 object ServiceModule {
 
+    // FusedLocationProviderClient 추가
     @ServiceScoped
     @Provides
     fun provideFusedLocationProviderClient(
         @ApplicationContext app: Context
     ) = FusedLocationProviderClient(app)
 
+    // PendingIntent 추가
     @ServiceScoped
     @Provides
     fun provideMainActivityPendingIntent(
@@ -38,6 +40,7 @@ object ServiceModule {
         PendingIntent.FLAG_UPDATE_CURRENT
     )
 
+    // NotificationCompat.Builder 추가
     @ServiceScoped
     @Provides
     fun provideBaseNotificationBuilder(

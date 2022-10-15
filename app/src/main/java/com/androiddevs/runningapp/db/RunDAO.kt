@@ -6,7 +6,7 @@ import androidx.room.*
 @Dao
 interface RunDAO {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE) // PrimaryKey 덮어쓰기
     suspend fun insertRun(run: Run)
 
     @Delete
