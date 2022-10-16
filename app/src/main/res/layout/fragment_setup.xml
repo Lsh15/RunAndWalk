@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/md_blue_200">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -11,6 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/welcome"
         android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/tilName"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,7 +35,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +55,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/weight"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +73,7 @@
 
     <me.rishabhkhanna.customtogglebutton.CustomToggleButton
         android:id="@+id/walkToggleBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
@@ -89,6 +94,16 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/tilWeight" />-->
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walkToggleBtn"
+        app:srcCompat="@drawable/ic_run_color" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -104,7 +119,7 @@
             android:id="@+id/tvContinue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Continue"
+            android:text="@string/Continue"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
