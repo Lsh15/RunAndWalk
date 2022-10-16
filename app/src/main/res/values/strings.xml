@@ -25,6 +25,7 @@
     <string name="CALORIES_BURNED">CALORIES BURNED</string>
     <string name="Continue">Continue</string>
     <string name="Start">Start</string>
+    <string name="Stop">Stop</string>
     <string name="Finish">Finish Run</string>
     <string name="Total_Distance">Total Distance</string>
     <string name="Total_Time">Total Time</string>
@@ -36,4 +37,10 @@
     <string name="Sort_by">Sort by:</string>
     <string name="Finish_Run">Finish Run</string>
     <string name="Your_Runs">Your Runs</string>
+    <string name="HELLO">Let\'s go </string>
+    <string name="Run_saved">Run saved successfully</string>
+    <string name="enter_fields">Please enter all fields.</string>
+
+
+
 </resources>

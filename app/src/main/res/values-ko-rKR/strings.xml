@@ -27,5 +27,8 @@
     <string name="Sort_by">정렬 기준:</string>
     <string name="Finish_Run">운동 종료하기</string>
     <string name="Your_Runs">운동하기</string>
-
-</resources>
+    <string name="HELLO">안녕하세요. </string>
+    <string name="Stop">중단</string>
+    <string name="Run_saved">운동이 정상적으로 저장되었습니다.</string>
+    <string name="enter_fields">정보를 전부 입력해주세요.</string>
+    </resources>
