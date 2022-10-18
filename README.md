@@ -1,16 +1,30 @@
 # RunningApp
 ## 구글 맵을 이용한 산책 기록 앱
 
-### 실행화면
+Google Maps SDK for Android 를 이용하여 운동(걷기, 뛰기)기록 App을 제작하였습니다.
+
+![image](https://user-images.githubusercontent.com/50148363/196395740-845faf92-5f63-4b5a-992d-5fec819ed1ff.png)
+
+코드에서 API 사용하려면 별도의 개인 API를 사용해야 합니다.
+
+### App 실행화면
 #### 초기 실행화면
+<img src = "https://user-images.githubusercontent.com/50148363/196392530-be2a2d42-1398-4dc0-be2a-defc72cc67dc.png" width="300" height="500"/> 
+사용자의 정보와 운동 유형(걷기, 뛰기)을 입력받습니다.
 
 #### 산책 기록 화면
+<img src = "https://user-images.githubusercontent.com/50148363/196392943-a8a29527-c8f3-4b6a-aec6-aa1c93595f60.png" width="300" height="500"/> 
+운동 기록을 확인할 수 있으며 정렬이 가능합니다.
 
 #### 통계 화면
 
 #### 설정 화면
+<img src = "https://user-images.githubusercontent.com/50148363/196393213-9bf68c7f-01c8-4814-8bee-0335acc5ebc5.png" width="300" height="500"/> 
+초기 설정을 수정할 수 있습니다.
 
 #### 추적 화면
+<img src = "https://user-images.githubusercontent.com/50148363/196393699-2136fab6-1b82-4ce2-9448-91ba3173a0b2.png" width="300" height="500"/>
+운동 경로, 시간이 실시간으로 표시됩니다.
 
 #### 서비스 화면
 
