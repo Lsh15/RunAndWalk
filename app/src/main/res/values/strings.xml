@@ -11,6 +11,8 @@
         AIzaSyDEUG1s6MnhVnSErulSUfZSkD3m5bFzv84</string>
 
     <string name="welcome">Please enter your name and weight and select a type.</string>
+    <string name="Exercise_Record">Exercise Record</string>
+
     <string name="walk">Walk</string>
     <string name="run">Run</string>
     <string name="name">Your Name</string>
@@ -34,13 +36,14 @@
     <string name="Statistics">Statistics</string>
     <string name="Settings">Settings</string>
     <string name="Apply_Changes">Apply Changes</string>
+    <string name="Line_Changes">Line Color Changes</string>
     <string name="Sort_by">Sort by:</string>
     <string name="Finish_Run">Finish Run</string>
     <string name="Your_Runs">Your Runs</string>
     <string name="HELLO">Let\'s go </string>
     <string name="Run_saved">Run saved successfully</string>
     <string name="enter_fields">Please enter all fields.</string>
-
-
+    <string name="Pause">Pause</string>
+    <string name="Resume">Resume</string>
 
 </resources>

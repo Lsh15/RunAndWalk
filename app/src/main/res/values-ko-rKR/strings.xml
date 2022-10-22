@@ -18,8 +18,8 @@
     <string name="Total_Time">총 시간</string>
     <string name="Total_Calories_Burned">총 칼로리 소모량</string>
     <string name="Average_Speed">평균 속도</string>
-    <string name="Statistics">설정</string>
-    <string name="Settings">통계</string>
+    <string name="Statistics">통계</string>
+    <string name="Settings">설정</string>
     <string name="CALORIES">칼로리</string>
     <string name="TIME">시간</string>
     <string name="Running_Time">운동 시간</string>
@@ -31,4 +31,9 @@
     <string name="Stop">중단</string>
     <string name="Run_saved">운동이 정상적으로 저장되었습니다.</string>
     <string name="enter_fields">정보를 전부 입력해주세요.</string>
-    </resources>
+    <string name="Line_Changes">선 색 변경하기</string>
+    <string name="Exercise_Record">운동 기록을 측정중입니다.</string>
+    <string name="Pause">중단</string>
+    <string name="Resume">다시 시작</string>
+
+</resources>
