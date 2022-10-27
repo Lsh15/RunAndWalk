@@ -28,8 +28,10 @@ class RunAdapter : RecyclerView.Adapter<RunAdapter.RunViewHolder>() {
         }
     }
 
+    // 비동기 처리
     val differ = AsyncListDiffer(this, diffCallback)
 
+    // 데이터 변경
     fun submitList(list: List<Run>) = differ.submitList(list)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RunViewHolder {
