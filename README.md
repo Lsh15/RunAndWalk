@@ -1,5 +1,5 @@
 # RunningApp
-## 구글 맵을 이용한 산책 기록 앱
+## 구글 맵을 이용한 운동 기록 앱
 
 Google Maps SDK for Android 를 이용하여 운동(걷기, 뛰기)기록 App을 제작하였습니다.
 
