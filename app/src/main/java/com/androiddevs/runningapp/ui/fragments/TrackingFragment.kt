@@ -2,6 +2,7 @@ package com.androiddevs.runningapp.ui.fragments
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -16,6 +17,7 @@ import com.androiddevs.runningapp.db.Run
 import com.androiddevs.runningapp.other.Constants.ACTION_PAUSE_SERVICE
 import com.androiddevs.runningapp.other.Constants.ACTION_START_OR_RESUME_SERVICE
 import com.androiddevs.runningapp.other.Constants.ACTION_STOP_SERVICE
+import com.androiddevs.runningapp.other.Constants.KEY_COLOR
 import com.androiddevs.runningapp.other.Constants.KEY_TYPE
 import com.androiddevs.runningapp.other.Constants.MAP_ZOOM
 import com.androiddevs.runningapp.other.Constants.POLYLINE_COLOR
@@ -59,6 +61,9 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
     @Inject
     lateinit var sharedPref : SharedPreferences
 
+    // 선 색상
+    private var POLYLINE_COLOR = Color.RED
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -74,6 +79,9 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
         btnToggleRun.setOnClickListener {
             toggleRun()
         }
+
+        // 색상 정보 불러오기
+        colorLoad()
 
         if (savedInstanceState != null){
             val cancelTrackingDialog = parentFragmentManager.findFragmentByTag(
@@ -255,6 +263,18 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking) {
             it.action = action
             requireContext().startService(it)
         }
+
+    // 색상 정보 불러오기
+    private fun colorLoad(){
+        val colorState = sharedPref.getInt(KEY_COLOR,1)
+        Log.d("colorState","colorState $colorState")
+        when (colorState){
+            1 -> POLYLINE_COLOR = Color.RED
+            2 -> POLYLINE_COLOR = Color.BLUE
+            3 -> POLYLINE_COLOR = Color.GREEN
+            4 -> POLYLINE_COLOR = Color.BLACK
+        }
+    }
 
     override fun onResume() {
         super.onResume()

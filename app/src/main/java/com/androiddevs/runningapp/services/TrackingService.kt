@@ -153,7 +153,7 @@ class TrackingService : LifecycleService() {
     }
 
     private fun updateNotificationTrackingState(isTracking: Boolean) {
-        val notificationActionText = if(isTracking) "Pause" else "Resume"
+        val notificationActionText = if(isTracking) "중단" else "다시 시작"
         val pendingIntent = if(isTracking) {
             val pauseIntent = Intent(this, TrackingService::class.java).apply {
                 action = ACTION_PAUSE_SERVICE
