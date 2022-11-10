@@ -25,8 +25,10 @@ import pub.devrel.easypermissions.EasyPermissions
 @AndroidEntryPoint
 class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionCallbacks {
 
+    // 뷰모델 생성
     private val viewModel: MainViewModel by viewModels()
 
+    // RunAdapter 선언
     private lateinit var runAdapter: RunAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,7 +58,6 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
             }
         }
 
-
         viewModel.runs.observe(viewLifecycleOwner, Observer {
             runAdapter.submitList(it)
 
@@ -74,7 +75,9 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
 
     }
 
+    // 권한 요청
     private fun requestPermissions() {
+        // 이미 권한이 있으면 그냥 리턴
         if(TrackingUtility.hasLocationPermissions(requireContext())) {
             return
         }
