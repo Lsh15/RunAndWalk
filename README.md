@@ -40,7 +40,6 @@ Glide | 이미지 로딩 라이브러리
 ViewModel | 수명주기 고려 데이터를 저장, 관리 라이브러리 
 Coroutine | 비동기 처리 라이브러리  
 Coroutine Flow | 비동기 데이터 스트림 
-Retrofit | HTTP 통신 라이브러리 
 Dagger Hilt | 의존성 주입 라이브러리 
 GoogleMap | 구글 지도 라이브러리  
 Mp Android Chart | 안드로이드 차트 통계 라이브러리  
